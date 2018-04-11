@@ -1,52 +1,55 @@
 'use strict';
 
-// var location = ['1st and Pike', 'SeaTac Airport', 'Seattle Center', 'Capitol Hill', 'Alki'];
-// var minCust = [23, 3, 11, 20, 2];
-// var maxCust = [65, 24, 38, 38, 16];
-// var avgCookieSale = [6.3, 1.2, 3.7, 2.3,];
+var firstAndPikeShop = {
+  name: '1st and Pike',
+  minHourlyCustomers: 23,
+  maxHourlyCustomers: 65,
+  avgCookiePerSale: 6.3,
+  openHour: 6,
+  closeHour: 20,
+  cookiesSold: [],
 
+  makeSales: function () {
+    var square = document.createElement('span');
+    square.className += 'salesbox';
+    document.body.appendChild(square);
 
+    var heading = document.createElement('h2');
+    heading.textContent = this.name;
+    square.appendChild(heading);
 
-var lowestCustomer = {
-  minimumPeople: [23, 3, 11, 20, 2],
-  renderCustomer: function () {
-    // access the parent element from the DOM
-    var ulElement = document.getElementById('low cookie customer');
-    var location = ['1st and Pike', 'SeaTac Airport', 'Seattle Center', 'Capitol Hill', 'Alki'];
-    for (var i = 0; i < location.length; i++) {
-      // 1. create element
-      var listItemElement = document.createElement('li');
+    var list = document.createElement('u1');
+    square.appendChild(list);
 
-      // 2. give it content
-      listItemElement.textContent = location[i] + ': ' + this.minimumPeople[i];
+    var hourNumber;
+    var morningEvening;
+    var ranNum;
+    for (var i = this.openHour; i <= this.closeHour; i++) {
+      var item = document.createElement('li');
+      if (i < 12) {
+        morningEvening = 'am: ';
+      } else {
+        morningEvening = 'pm: ';
+      }
+      if (i > 12) {
+        hourNumber = i - 12;
+      } else {
+        hourNumber = i;
+      }
+    ranNum = Math.round(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
 
-      // 3. append it to the DOM
-      // parentElement.appendChild(childElement);
-      ulElement.appendChild(listItemElement);
-    }
+    this.cookiesSold.push(ranNum);
+
+    item.textContent = hourNumber + morningEvening + ranNum + ' cookies';
+    list.appendChild(item);
   }
 };
-
-var highestCustomer = {
-  maximumPeople: [65, 24, 38, 38, 16],
-  renderCustomer: function () {
-    // access the parent element from the DOM
-    var ulElement = document.getElementById('maximum customer');
-
-    for (var i = 0; i < this.maximumPeople; i++) {
-      // 1. create element
-      var listItemElement = document.createElement('li');
-
-      // 2. give it content
-      listItemElement.textContent = location[i] + ': ' + this.maximumPeople.miles[i];
-
-      // 3. append it to the DOM
-      // parentElement.appendChild(childElement);
-      ulElement.appendChild(listItemElement);
-    }
-  }
+var totalNum = 0;
+var total = document.createElement('li');
+for (i in this.cookiesSold) {
+  totalNum += i;
+}
+total.textContent = 'Total: ' + totalNum + ' cookies';
+list.appendChild(total);
+}
 };
-
-
-lowestCustomer.renderCustomer();
-highestCustomer.renderCustomer();
