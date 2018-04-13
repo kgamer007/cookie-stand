@@ -50,18 +50,17 @@ SalmonCookies.prototype.displayMarketSales = function () {
     item.textContent = this.cookiesSoldInformationByHour[i];
     list.appendChild(item);
   }
-
-  // this.cookiesSoldInformationByHour.forEach(function (textForAGivenHour) {
-  //   var item = document.createElement('li');
-  //   item.textContent = textForAGivenHour;
-  //   list.appendChild(item);
-  // });
-
-
   var total = document.createElement('li');
   total.textContent = 'Total: ' + this.totalCookiesSold + ' cookies';
   list.appendChild(total);
 };
+
+// need some help!!!
+// function AddAnotherStore(event) {
+//   event.startNewStore();
+//   var element = event.target;
+//   var newStore = new SalmonCookies(element.)
+// }
 
 var firstAndPike = new SalmonCookies('1st and pike', 23, 65, 6.3);
 var airport = new SalmonCookies('SeaTac Airport', 3, 24, 1.2);
