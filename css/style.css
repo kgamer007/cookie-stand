@@ -8,9 +8,9 @@ body {
   width: 960px;
 }
 img {
-  width: 100px;
-  height: 40px;
-  border-image: auto;
+  width: 200px;
+  height: 80px
+ 
 }
 header {
   background-color: rgb(138, 75, 23);
@@ -18,11 +18,14 @@ header {
   text-align: center;
   width: 100%;
   padding: 50px;
+  max-height: 0px;
+  font-size: 40px
 }
 
 p {
   border-image: auto;
   text-align: center;
+  padding: 80px;
 }
 
 .index-page {
@@ -34,11 +37,21 @@ p {
   text-align: 300px;
 }
 
+h1 {
+  border-image: auto;
+  width: 20px;
+  height: 180px;
+  font-size: 60px
+}
+
 h2 {
   font-size: 200%;
+  border-image: 200px;
   height: 130%;
   padding: 15px 10px;
   width: 5px;
+  max-height: 150px;
+  max-width: 200px;
 }
 
 h3 {
