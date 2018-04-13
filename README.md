@@ -13,3 +13,9 @@ As a developer, to demonstrate to my client my ability to add value, I will crea
 April 11th 2018
 
 As a developer, I will be adding a forms section to gather information with user 
+
+April 12th 2018 
+
+Finished editing and refactoring/DRYing out code in JS.
+sales.html has been updated with a user control however struggled with being able to store new information of new store. 
+app.js has also been updated with a form 

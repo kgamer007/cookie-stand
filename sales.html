@@ -9,34 +9,43 @@
 
 <body>
   <h1>Customer table/location</h1>
-  <table>
-    <ol>
-      <li>1st and Pike</li>
-      <li>SeaTac Airport</li>
-      <li>Seattle Center</li>
-      <li>Capitol Hill</li>
-      <li>Alki</li>
-    </ol>
+  <table id="cookiesTable">
+    <tr id="headerForCookiesTable">
+
+    </tr>
+    <!-- <tr>
+      <td>Bob's stand</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+    </tr> -->
   </table>
 
-  <form id= "another-store">
-    <div>
-      <label for="location-name-input">Name</label>
-      <input type="text" id="location-name-input" name="Location" />
-    </div>
-    <div>
-      <label for="max-customer">MaxCustomer</label>
-      <input type="number" id="max-customer" name="maximum customer" />
-    </div>
-    <div>
-      <label for="min-customer">MinCustomer</label>
-      <input type="number" id="min-customer" name="minimum" />
-    </div>
-    <div>
-      <label for="avg cookie">AvgCookieSale</label>
-      <input type="number" id="avg cookie" name="Average Sale" />
-    </div>
+  <form id="another-store">
+    <fieldset>
+      <div>
+        <legend>Add-Cookie-stand</legend>
+        <label for="location-name-input">nameStore</label>
+        <input type="text" id="location-name-input" name="Location" />
+      </div>
+      <div>
+        <label for="max-customer">MaxCustomer</label>
+        <input type="number" id="max-customer" name="maximum customer" />
+      </div>
+      <div>
+        <label for="min-customer">MinCustomer</label>
+        <input type="number" id="min-customer" name="minimum" />
+      </div>
+      <div>
+        <label for="avg cookie">AvgCookieSale</label>
+        <input type="number" id="avg cookie" name="Average Sale" />
+      </div>
+      <input type="enter" />
+    </fieldset>
   </form>
+  
   <script src="js/app.js"></script>
 </body>
 
