@@ -31,8 +31,8 @@ SalmonCookies.prototype.displayMarketSales = function () {
   var cookieLocationTD = document.createElement('td'); // <td></td>
   cookieLocationTD.textContent = this.name; // <td>hey</td>
   cookieRow.appendChild(cookieLocationTD); // <table><tr><td>hey</td></tr></table>
-   
-  for(var i = 0; i < this.cookiesSoldInformationByHour.length; i++) {
+
+  for (var i = 0; i < this.cookiesSoldInformationByHour.length; i++) {
     var numberOfCookiesTD = document.createElement('td'); //<td></td>
     numberOfCookiesTD.textContent = this.cookiesSoldInformationByHour[i];
 
@@ -119,3 +119,5 @@ function newAdditionalStore(event) {
 
 var storeElement = document.getElementById('another-store');
 storeElement.addEventListener('submit', newAdditionalStore);
+
+
