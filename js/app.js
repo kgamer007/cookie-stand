@@ -102,10 +102,20 @@ beach.displayMarketSales();
 
 function newAdditionalStore(event) {
   event.preventDefault();
-  var storeElement = event.target;
-  var brandNewStore = new SalmonCookies(storeElement.nameStore.value, storeElement.maxHourlyCustomers.value, storeElement.minHourlyCustomers.value);
-  newAdditionalStore(brandNewStore);
+  var storeFormElement = event.target;
+  var minHourlyCustomersAsInteger = parseInt(storeFormElement.minHourlyCustomers.value);
+  var maxHourlyCustomersAsInteger = parseInt(storeFormElement.maxHourlyCustomers.value);
+  var averageSalesPerCustomerAsFloat = parseFloat(storeFormElement.averageSalesPerCustomer.value);
+
+  var brandNewStore = new SalmonCookies(
+    storeFormElement.locationName.value,
+    minHourlyCustomersAsInteger,
+    maxHourlyCustomersAsInteger,
+    averageSalesPerCustomerAsFloat
+  );
+  brandNewStore.buildMarketSales();
+  brandNewStore.displayMarketSales();
 }
 
 var storeElement = document.getElementById('another-store');
-storeElement.addEventListener('enter', newAdditionalStore);
+storeElement.addEventListener('submit', newAdditionalStore);
